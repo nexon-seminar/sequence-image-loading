@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a,
+img {
+  text-decoration: none;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+}
+body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/bgLine.png) repeat 0 0;
+  opacity: 0.1;
+}
+
+h1 {
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.sns {
+  position: absolute;
+  top: 15vh;
+  right: 10%;
+  display: flex;
+}
+.sns a {
+  font-size: 20px;
+  color: #fff;
+  margin: 0 10px;
+  opacity: 0.5;
+  transition: 0.5s;
+  display: inline-block;
+}
+.sns a:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+nav article {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  perspective: 700px;
+  cursor: pointer;
+}
+nav article > a {
+  font: 12px/4 "orbitron";
+  color: #aaa;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+nav article div {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  top: -100px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000;
+  padding: 10px;
+  opacity: 0;
+  transform: scale(0) rotateY(360deg);
+  transition: opacity 0.5s, transform 0.5s;
+}
+nav article div p {
+  width: 100%;
+  height: 90px;
+}
+nav article div p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+nav article div h2 {
+  height: 50px;
+  font: bold 12px/50px "orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+nav article div ul {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+nav article div ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav article div ul li a {
+  font: normal 12px/1 "orbitron";
+  color: #888;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+nav article div ul li a:hover {
+  color: orange;
+}
+nav article:hover > a {
+  margin-left: -100px;
+  opacity: 0;
+}
+nav article:hover div {
+  opacity: 1;
+  transform: scale(1) rotateY(0deg);
+}
+
+section {
+  width: 100%;
+  height: 50vh;
+  position: fixed;
+  top: 25vh;
+  left: 0;
+  background: #222;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  padding: 0px 10%;
+  background: #111;
+  border-top: 1px solid #333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 11px/1 "arial";
+  color: #555;
+  letter-spacing: 1px;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  margin-right: 30px;
+}
+footer ul li:nth-of-type(1) {
+  color: #999;
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #111;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  font-family: "orbitron";
+  letter-spacing: 2px;
+  transition: 2s;
+}
+aside p {
+  position: relative;
+  top: -50px;
+}
+aside .bar {
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+aside.off {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
